@@ -1,0 +1,87 @@
+<div pageScroll fxFlex fxLayoutAlign="center center">
+<form [formGroup]="customerform" (ngSubmit)="SaveCustomer()" >
+    <mat-card>
+        <mat-card-content>
+    
+            <mat-form-field >
+                <mat-label>Grade</mat-label>
+                <!-- <input matInput> -->
+                <mat-select formControlName="country">
+                    <mat-option [value]="item" *ngFor="let item of countrylist">{{item}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+          
+    
+          
+    
+            <mat-form-field >
+                <mat-label>Subject</mat-label>
+                <!-- <input matInput> -->
+                <mat-select formControlName="subject">
+                    <mat-option [value]="item" *ngFor="let item of subjectlist">{{item}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-label>Cuuriculum Outcomes</mat-label>
+                <!-- <input matInput> -->
+                <textarea matInput formControlName="address"></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Input Field</mat-label>
+                <!-- <input matInput> -->
+                <textarea matInput formControlName="address"></textarea>
+            </mat-form-field>
+
+            <mat-chip-listbox>
+                <mat-chip-option color="primary">Planning</mat-chip-option>
+                <mat-chip-option color="progress">Reporting</mat-chip-option>
+                <mat-chip-option color="accent">Favourites</mat-chip-option>
+                <mat-chip-option color="warn">Filter</mat-chip-option>
+                
+               
+                
+       
+                
+              </mat-chip-listbox>
+         
+    
+            <div>
+                <mat-card-title>Quiz Generator</mat-card-title>
+            <mat-form-field  style="width: 150px;">
+                <mat-label>Number</mat-label>
+                <input [matAutocomplete]="auto" formControlName="term" matInput>
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let item of termlist" [value]="item">
+                        {{item}}
+                    </mat-option>
+                </mat-autocomplete>
+
+                
+            </mat-form-field>
+
+            <mat-form-field>
+                
+                <mat-label>Question Format</mat-label>
+                <!-- <input matInput> -->
+                <mat-select formControlName="country">
+                    <mat-option [value]="item" *ngFor="let item of countrylist">{{item}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+    </div>
+        
+    
+      
+    
+        </mat-card-content>
+        <mat-card-footer>
+        <div style="margin:2%;text-align: center;">
+            <button mat-raised-button type="submit" color="primary">Submit</button>
+            <button mat-raised-button color="warn" (click)="clearform()">Clear</button>
+        </div>
+        </mat-card-footer>
+    </mat-card>
+    
+    </form>
+    </div>

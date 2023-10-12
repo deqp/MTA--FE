@@ -1,38 +1,29 @@
-<mat-toolbar color="primary" class="sticky">
-    <mat-toolbar-row fxLayoutAlign="space-between center">
-      <div fxLayout="row">
-        <button mat-button>
-          <mat-icon>home</mat-icon>
-          <span class="logo">Technical Babaji</span>
-        </button>
-        <div *ngIf="!deviceXs" fxLayout="row">
-          <button mat-button>Home</button>
-          <button mat-button>About us</button>
-          <button mat-button>Contact us</button>
-        </div>
-      </div>
-      <div>
-        <button *ngIf="deviceXs" mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <button
-          *ngIf="!deviceXs"
-          mat-button
-          [matMenuTriggerFor]="menu"
-          fxLayoutAlign="end"
-        >
-          Menu
-        </button>
-      </div>
-    </mat-toolbar-row>
-    <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
-      <button mat-button>Home</button>
-      <button mat-button>About us</button>
-      <button mat-button>Contact us</button>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <!-- Menu Items -->
-  <mat-menu #menu="matMenu" fxLayoutAlign="end">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <button (click)="drawer.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+  </button>
+  <span>MTA</span>
+  <span class="example-spacer"></span>
+
+ 
+  <span class="material-icons" style="margin: 10px;" matbutton>account_circle</span>
+ 
+  <span class="material-icons">share</span>
+
+  
+</mat-toolbar>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer opened="true" mode="side" position="start">
+    <mat-tab-group>
+      <mat-tab label="History" mat-align-tabs="center"> </mat-tab>
+      <mat-tab label="Toolbox" mat-align-tabs="end"> </mat-tab>
+   
+    </mat-tab-group>
+  </mat-drawer>
+  <mat-drawer-content>
+      <div style="text-align: center;min-height: 600px;">
+
+          <router-outlet></router-outlet>
+          </div>
+  </mat-drawer-content>
+</mat-drawer-container>

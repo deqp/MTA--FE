@@ -4,9 +4,34 @@
     width: 100%;
     top: 0px;
     z-index: 10;
+    background-color: #2E2D2C ;
+   
   }
   
   .logo {
     padding: 0px 5px;
     font-size: 20px;
   }
+
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+ 
+
+  .mat-drawer {
+  
+    position: fixed;
+    height: 600px;
+    width: 270px;
+      position: absolute;
+      top:0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      overflow-y: scroll;
+    
+    }
+
+
+  

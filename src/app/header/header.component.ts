@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input , OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,20 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() deviceXs!: boolean;
+
+  topVal = 0;
+  onScroll(e: any) {
+    let scrollXs = this.deviceXs ? 55 : 73;
+    if (e.srcElement.scrollTop < scrollXs) {
+      this.topVal = e.srcElement.scrollTop;
+    } else {
+      this.topVal = scrollXs;
+    }
+  }
+  sideBarScroll() {
+    let e = this.deviceXs ? 160 : 130;
+    return e - this.topVal;
+
+
+  }
 }

@@ -19,19 +19,24 @@
   }
   
   .example-card {
-    max-width: 320px;
-    margin: 0px 5px 5px 0px;
+    width: 30%;
+    margin: 15px;
   }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image:  url('https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fmeta-l.cdn.bubble.io%2Ff1672952221146x417310664985390140%2FChatbot.png?w=64&h=64&auto=compress&dpr=1.25&fit=max');
     background-size: cover;
-  }
+    margin: 20px 0px -60px 20px;
   
-  mat-drawer {
+    
+  }
+ 
+
+  .mat-drawer {
   
     position: fixed;
-    background-color: rgb(236, 236, 236);
+    
+    width: 270px;
   }
   
   .example-sidenav-content:first-child {
@@ -47,3 +52,49 @@
     background-color: rgba(83, 83, 83, 0.178);
     cursor: pointer;
   }
+  .example-card-bot {
+    max-width: 750px;
+    margin: 20px 8px 0px 80px;
+    height: 90px;
+  }
+  .example-card-bot-image {
+    background-size: cover;
+    
+  }
+
+
+
+  .btn-tag {
+    background-color: #ECEFF1;
+    text-transform: capitalize !important;
+
+    margin: 60px 8px 0px 20px;
+    box-shadow: none;
+}
+
+.btn-rounded {
+  --mdb-btn-border-radius: 10rem;
+  border-radius: var(--mdb-btn-border-radius);
+}
+
+.btn-tag:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25), 0 3px 10px 5px rgba(0, 0, 0, 0.05) !important;
+  background-color: white;
+}
+
+.card{
+ 
+  width: 400px;
+}
+
+.ff{
+  width: 180px;
+}
+.mat-chip-listbox{
+  margin: 20px 0px 0px 30px;
+}
+
+ .card{
+  margin: 20px 8px 0px 70px;
+  width: 700px;
+}
