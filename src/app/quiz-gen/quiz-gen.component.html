@@ -1,0 +1,76 @@
+<div pageScroll fxFlex fxLayoutAlign="center center" style="margin: 75px 0px 0px 0px;"> 
+
+    <form [formGroup]="customerform" (ngSubmit)="SaveCustomer()" >
+        <mat-card style="box-shadow: 0 0 11px rgba(33,33,33,.2); ">
+            <mat-card-title style="margin: 20px; font-size: 30px;">MTA - Quiz Generator</mat-card-title>
+            <mat-card-content>
+        
+                <mat-form-field >
+                    <mat-label>Year/Grade Level</mat-label>
+                    <!-- <input matInput> -->
+                    <mat-select formControlName="country">
+                        <mat-option [value]="item" *ngFor="let item of countrylist">{{item}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+              
+     
+              
+        
+                <mat-form-field >
+                    <mat-label>Subject</mat-label>
+                    <!-- <input matInput> -->
+                    <mat-select formControlName="subject">
+                        <mat-option [value]="subject" *ngFor="let subject of subjectlist">{{subject}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+        
+               
+    
+                <mat-form-field>
+                    <mat-label>Enter the Topic</mat-label>
+                    <!-- <input matInput> -->
+                    <textarea matInput formControlName="country" style="height: 50px;"></textarea>
+                </mat-form-field>
+    
+    
+             
+        
+                <div>
+                    <mat-card-title style="font-weight: lighter; margin : 23px 0px 20px 0px;">How many and what format of questions would you like ?</mat-card-title>
+                <mat-form-field  >
+                    <mat-label style="justify-content: center;">No.</mat-label>
+                    <input [matAutocomplete]="auto" matInput>
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let item of termlist" [value]="item">
+                            {{item}}
+                        </mat-option>
+                    </mat-autocomplete>
+    
+                    
+                </mat-form-field>
+    
+                <mat-form-field>
+                    
+                    <mat-label>Question Format</mat-label>
+                    <!-- <input matInput> -->
+                    <mat-select formControlName="format">
+                        <mat-option [value]="format" *ngFor="let format of formatlist">{{format}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+        </div>
+            
+        
+          
+        
+            </mat-card-content>
+            <mat-card-footer>
+            <div style="margin:2%;text-align: center;">
+                <button mat-raised-button type="submit" color="primary">Submit</button>
+                <button mat-raised-button color="warn" (click)="clearform()">Clear</button>
+            </div>
+            </mat-card-footer>
+        </mat-card>
+        
+        </form>
+        </div>
+       

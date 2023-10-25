@@ -1,12 +1,14 @@
-.sticky {
-    padding: 0px;
+
+
+  .sticky{
     position: fixed;
     width: 100%;
-    top: 0px;
-    z-index: 10;
+    top:0px;
+    height: 4rem;
+    z-index: 2;
     background-color: #2E2D2C ;
-   
-  }
+}
+
   
   .logo {
     padding: 0px 5px;
@@ -21,17 +23,56 @@
 
   .mat-drawer {
   
-    position: fixed;
-    height: 600px;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+   margin: 69px 0px 0px 0px;
     width: 270px;
-      position: absolute;
-      top:0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      overflow-y: scroll;
-    
+    height: 100%;
+     
+  
+      
+      
     }
+
+
+    .example-menu {
+      justify-content: center;
+    
+      
+      display: inline-flex;
+      flex-direction: column;
+      min-width: 269px;
+      max-width: 280px;
+      background-color: rgb(255, 255, 255);
+      padding: 6px 0;
+    }
+    
+    .example-menu-item, a{
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      color: black;
+      user-select: none;
+      min-width: 64px;
+      line-height: 36px;
+      padding: 0 16px;
+      margin: 4px;
+      font-size: 15px;
+    
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex: 1;
+    }
+    
+    .example-menu-item:hover {
+      background-color: rgb(208, 208, 208);
+    }
+    
+    .example-menu-item:active {
+      background-color: rgb(170, 170, 170);
+    }
+    
 
 
   

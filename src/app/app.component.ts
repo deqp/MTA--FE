@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
+import {AuthService} from './services/auth.service'
 
 
 @Component({
@@ -12,10 +13,11 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'flex-tutorial';
+  auth:any;
   mediaSub!: Subscription;
   deviceXs!: boolean;
-  constructor(public mediaObserver: MediaObserver) {
-
+  constructor(private mediaObserver: MediaObserver, authdata:AuthService) {
+      
   }
   ngOnInit() {
     this.mediaSub = this.mediaObserver.asObservable().subscribe((res: MediaChange[]) => {

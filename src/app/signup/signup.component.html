@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sign Up Form by Colorlib</title>
+
+
+
+
+<meta name="robots" content="noindex, follow">
+<script nonce="9bb72b31-c072-42ab-92d7-87aff1cd9b73">(function(w,d){!function(t,u,v,w){t[v]=t[v]||{};t[v].executed=[];t.zaraz={deferred:[],listeners:[]};t.zaraz.q=[];t.zaraz._f=function(x){return async function(){var y=Array.prototype.slice.call(arguments);t.zaraz.q.push({m:x,a:y})}};for(const z of["track","set","debug"])t.zaraz[z]=t.zaraz._f(z);t.zaraz.init=()=>{var A=u.getElementsByTagName(w)[0],B=u.createElement(w),C=u.getElementsByTagName("title")[0];C&&(t[v].t=u.getElementsByTagName("title")[0].text);t[v].x=Math.random();t[v].w=t.screen.width;t[v].h=t.screen.height;t[v].j=t.innerHeight;t[v].e=t.innerWidth;t[v].l=t.location.href;t[v].r=u.referrer;t[v].k=t.screen.colorDepth;t[v].n=u.characterSet;t[v].o=(new Date).getTimezoneOffset();if(t.dataLayer)for(const G of Object.entries(Object.entries(dataLayer).reduce(((H,I)=>({...H[1],...I[1]})),{})))zaraz.set(G[0],G[1],{scope:"page"});t[v].q=[];for(;t.zaraz.q.length;){const J=t.zaraz.q.shift();t[v].q.push(J)}B.defer=!0;for(const K of[localStorage,sessionStorage])Object.keys(K||{}).filter((M=>M.startsWith("_zaraz_"))).forEach((L=>{try{t[v]["z_"+L.slice(7)]=JSON.parse(K.getItem(L))}catch{t[v]["z_"+L.slice(7)]=K.getItem(L)}}));B.referrerPolicy="origin";B.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(t[v])));A.parentNode.insertBefore(B,A)};["complete","interactive"].includes(u.readyState)?zaraz.init():t.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
+<body>
+<div class="main">
+
+<section class="signup">
+<div class="container">
+<div class="signup-content">
+<div class="signup-form">
+<h2 class="form-title">Sign up</h2>
+
+<form method="POST" class="register-form" id="register-form" [formGroup]="signup" (ngSubmit)="onSubmit()">
+<div class="form-group">
+<label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+<input type="text" name="name" id="name" placeholder="First Name" formControlName="firstName" />
+</div>
+<div class="form-group">
+<label for="email"><i class="zmdi zmdi-email"></i></label>
+<input type="name" name="name" id="name" placeholder="Last Name" formControlName="lastName"/>
+</div>
+<div class="form-group">
+<label for="email"><i class="zmdi zmdi-email"></i></label>
+<input type="name" name="name" id="name" placeholder="User Name" formControlName="userName"/>
+</div>
+<div class="form-group">
+<label for="pass"><i class="zmdi zmdi-lock"></i></label>
+<input type="password" name="password" id="pass" placeholder="Password" formControlName="password" />
+
+</div>
+
+<div class="form-group">
+<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+<label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in <a href="#" class="term-service">Terms of service</a></label>
+</div>
+<div class="form-group form-button">
+<input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+</div>
+</form>
+</div>
+<div class="signup-image">
+<figure><img src="assets/15635875_5638983.jpg" alt="sing up image"></figure>
+<a href="#" class="signup-image-link">I am already member</a>
+</div>
+</div>
+</div>
+</section>
+
+
+</div>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"817e85cbfdfe603a","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatRadioButton } from '@angular/material/radio';
 
 
-
 @Component({
-  selector: 'app-tool-one',
-  templateUrl: './tool-one.component.html',
-  styleUrls: ['./tool-one.component.css']
+  selector: 'app-tooltwo',
+  templateUrl: './tooltwo.component.html',
+  styleUrls: ['./tooltwo.component.css']
 })
-export class ToolOneComponent implements OnInit {
-
+export class TooltwoComponent {
   countrylist=['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4']
   formatlist=['Format one', 'Format two', 'format three', 'format four']
   subjectlist=['Subject 1','Subject 2','Subject 3','Subject 4']
@@ -21,7 +19,7 @@ export class ToolOneComponent implements OnInit {
   }
   ngOnInit(): void {
     this.customerform.setValue({name:'Nihira Techiees',email:'nihiratechiees@gmail.com',phone:'77678899',
-  country:'',subject:'',term:'',address:'',dob:new Date(2001,2,3),gender:'Male',status:true, format:'Select Format Type'})
+  country:'',subject:'',term:'',address:'add1',dob:new Date(2001,2,3),gender:'Male',status:true, format:'Select Format Type'})
   }
 
 
@@ -47,3 +45,4 @@ export class ToolOneComponent implements OnInit {
     this.customerform.reset();
 
 }}
+

@@ -22,11 +22,18 @@
     width: 30%;
     margin: 15px;
   }
+
+  .example-card:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
   
   .example-header-image {
     background-image:  url('https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fmeta-l.cdn.bubble.io%2Ff1672952221146x417310664985390140%2FChatbot.png?w=64&h=64&auto=compress&dpr=1.25&fit=max');
     background-size: cover;
-    margin: 20px 0px -60px 20px;
+    margin: 45px 0px -60px 18px;
+    width: 47px;
+    height: 47px;
+    box-shadow: 0px 0 30px rgba(22, 255, 220, 0.2); 
   
     
   }
@@ -97,4 +104,15 @@
  .card{
   margin: 20px 8px 0px 70px;
   width: 700px;
+}
+
+
+
+.textleft{
+  text-align: left;
+}
+
+.m-0{
+  text-align: left;
+  
 }

@@ -1,9 +1,9 @@
-<mat-toolbar color="primary" class="mat-elevation-z8">
+<mat-toolbar color="primary" class="sticky" >
   <button (click)="drawer.toggle()" mat-icon-button>
       <mat-icon>menu</mat-icon>
   </button>
-  <span>MTA</span>
-  <span class="example-spacer"></span>
+  
+  <span class="example-spacer" [routerLink]="['/content']" style="cursor: pointer;">MAT</span>
 
  
   <span class="material-icons" style="margin: 10px;" matbutton>account_circle</span>
@@ -15,8 +15,29 @@
 <mat-drawer-container autosize>
   <mat-drawer #drawer opened="true" mode="side" position="start">
     <mat-tab-group>
-      <mat-tab label="History" mat-align-tabs="center"> </mat-tab>
-      <mat-tab label="Toolbox" mat-align-tabs="end"> </mat-tab>
+     
+      <mat-tab label="Toolbox" mat-align-tabs="end" > 
+
+        <div class="example-menu" cdkMenu>
+          <mat-divider></mat-divider>
+          <button class="example-menu-item" cdkMenuItem><a routerLink="tool-one" >  MTA </a></button>
+          <mat-divider></mat-divider>
+          <button class="example-menu-item" cdkMenuItem><a routerLink="tooltwo" > Lesson Planner </a></button>
+          <mat-divider></mat-divider>
+          <button class="example-menu-item" cdkMenuItem><a routerLink="quiz-gen"> Quiz Generator </a></button>
+          <mat-divider></mat-divider>
+          <button class="example-menu-item" cdkMenuItem><a routerLink="content"  > MTA Tool Four </a></button>
+          <mat-divider></mat-divider>
+          <button class="example-menu-item" cdkMenuItem><a routerLink="content" > MTA Tool Five </a></button>
+          <mat-divider></mat-divider>
+          <button class="example-menu-item" cdkMenuItem><a routerLink="content" > MTA Tool Six </a></button>
+          <mat-divider></mat-divider>
+
+          <mat-tab label="History" mat-align-tabs="center"> 
+            <h2></h2>
+          </mat-tab>
+        </div>
+      </mat-tab>
    
     </mat-tab-group>
   </mat-drawer>

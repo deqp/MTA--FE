@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatRadioButton } from '@angular/material/radio';
 
 
-
 @Component({
-  selector: 'app-tool-one',
-  templateUrl: './tool-one.component.html',
-  styleUrls: ['./tool-one.component.css']
+  selector: 'app-quiz-gen',
+  templateUrl: './quiz-gen.component.html',
+  styleUrls: ['./quiz-gen.component.css']
 })
-export class ToolOneComponent implements OnInit {
+export class QuizGenComponent {
 
   countrylist=['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4']
   formatlist=['Format one', 'Format two', 'format three', 'format four']

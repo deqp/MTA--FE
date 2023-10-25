@@ -1,0 +1,59 @@
+<div pageScroll fxFlex fxLayoutAlign="center center" style="margin: 75px 0px 0px 0px;"> 
+
+    <form [formGroup]="customerform" (ngSubmit)="SaveCustomer()" >
+        <mat-card style="box-shadow: 0 0 11px rgba(33,33,33,.2); ">
+            <mat-card-title style="margin: 20px; font-size: 30px;">MTA - Lesson Planner</mat-card-title>
+            <mat-card-content>
+        
+                <mat-form-field >
+                    <mat-label>Year/Grade Level</mat-label>
+                    <!-- <input matInput> -->
+                    <mat-select formControlName="country">
+                        <mat-option [value]="item" *ngFor="let item of countrylist">{{item}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+              
+     
+              
+        
+                <mat-form-field >
+                    <mat-label>Subject</mat-label>
+                    <!-- <input matInput> -->
+                    <mat-select formControlName="country">
+                        <mat-option [value]="item" *ngFor="let item of subjectlist">{{item}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+        
+                <mat-form-field>
+                    <mat-label>Cuuriculum Outcomes</mat-label>
+                    <!-- <input matInput> -->
+                    <textarea matInput formControlName="country" style="height: 90px;"></textarea>
+                </mat-form-field>
+    
+                <mat-form-field>
+                    <mat-label>Input Field</mat-label>
+                    <!-- <input matInput> -->
+                    <textarea matInput formControlName="country" style="height: 90px;"></textarea>
+                </mat-form-field>
+    
+          
+                 
+             
+        
+                
+            
+        
+          
+        
+            </mat-card-content>
+            <mat-card-footer>
+            <div style="margin:2%;text-align: center;">
+                <button mat-raised-button type="submit" color="primary">Submit</button>
+                <button mat-raised-button color="warn" (click)="clearform()">Clear</button>
+            </div>
+            </mat-card-footer>
+        </mat-card>
+        
+        </form>
+        </div>
+       

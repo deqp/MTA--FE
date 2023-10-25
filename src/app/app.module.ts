@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -33,6 +34,13 @@ import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepicker } from '@angular/material/datepicker';
+import { TooltwoComponent } from './tooltwo/tooltwo.component';
+import { QuizGenComponent } from './quiz-gen/quiz-gen.component';
+
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+
+
 
 
 
@@ -43,11 +51,16 @@ import { MatDatepicker } from '@angular/material/datepicker';
     ContentComponent,
     ToolOneComponent,
     SidebarComponent,
-    
+    TooltwoComponent,
+    QuizGenComponent,
+ 
+    SignupComponent,
+      LoginComponent,
+   
   ],
   imports: [
     BrowserModule,
-   
+   HttpClientModule,
  CardModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
@@ -76,10 +89,6 @@ import { MatDatepicker } from '@angular/material/datepicker';
    MatRadioModule,
    MatCheckboxModule,
  
-
-  
-   
-
    
   ],
   providers: [],
